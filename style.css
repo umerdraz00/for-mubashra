@@ -1,0 +1,1953 @@
+/*=========================================================
+    FILE : style.css
+    PROJECT : Birthday Surprise For Mubashra
+    PART : 1
+=========================================================*/
+
+
+/*=========================================================
+                    GOOGLE FONT
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*=========================================================
+                    RESET
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#030712;
+
+    color:#ffffff;
+
+    overflow:hidden;
+
+}
+
+
+/*=========================================================
+                LOADING SCREEN
+=========================================================*/
+
+#loadingScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#020617;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.loader{
+
+    text-align:center;
+
+}
+
+.loader h2{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:24px;
+
+    letter-spacing:1px;
+
+}
+
+.loaderRing{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    border:8px solid rgba(255,255,255,.15);
+
+    border-top:8px solid white;
+
+    animation:loaderRotate 1s linear infinite;
+
+}
+
+@keyframes loaderRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*=========================================================
+                    NIGHT SKY
+=========================================================*/
+
+#nightSky{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(circle at top,#12214a,#071122 40%,#02040a 100%);
+
+    z-index:-20;
+
+}
+
+
+/*=========================================================
+                    WHITE MOON
+=========================================================*/
+
+#moon{
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    right:80px;
+
+    top:50px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    #ffffff 0%,
+
+    #f4f4f4 55%,
+
+    #dadada 100%);
+
+    box-shadow:
+
+    0 0 40px rgba(255,255,255,.9),
+
+    0 0 90px rgba(255,255,255,.5),
+
+    0 0 180px rgba(255,255,255,.25);
+
+    animation:moonGlow 5s ease-in-out infinite;
+
+}
+
+.moonGlow{
+
+    position:absolute;
+
+    inset:-25px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    filter:blur(25px);
+
+}
+
+@keyframes moonGlow{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.06);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================================================
+                    STARS
+=========================================================*/
+
+#stars{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    background:#ffffff;
+
+    border-radius:50%;
+
+    box-shadow:
+
+    0 0 8px white,
+
+    0 0 15px white;
+
+    animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.8);
+
+    }
+
+}
+
+
+/*=========================================================
+                SHOOTING STARS
+=========================================================*/
+
+#shootingStars{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+/*=========================================================
+                    CLOUDS
+=========================================================*/
+
+#clouds{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+/*=========================================================
+                FIREWORK CANVAS
+=========================================================*/
+
+#fireworksCanvas{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:-5;
+
+}
+
+
+/*=========================================================
+                SCREEN
+=========================================================*/
+
+.screen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:1s;
+
+}
+
+.screen.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/*=========================================================
+                WELCOME TEXT
+=========================================================*/
+
+.welcomeText{
+
+    font-size:34px;
+
+    color:white;
+
+    margin-bottom:40px;
+
+    text-shadow:
+
+    0 0 15px white,
+
+    0 0 35px white;
+
+}
+
+
+/*=========================================================
+                GIFT SCENE
+=========================================================*/
+
+.giftScene{
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+
+/*=========================================================
+                GIFT SHADOW
+=========================================================*/
+
+.giftShadow{
+
+    width:220px;
+
+    height:35px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.45);
+
+    filter:blur(12px);
+
+    margin-top:230px;
+
+}
+
+
+/*=========================================================
+                GIFT BOX
+=========================================================*/
+
+.giftBox{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:0;
+
+    width:220px;
+
+    height:220px;
+
+    cursor:pointer;
+
+    animation:
+
+    giftBounce 2.5s ease-in-out infinite;
+
+}
+
+@keyframes giftBounce{
+
+    0%,100%{
+
+        transform:
+
+        translateX(-50%)
+
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+
+        translateX(-50%)
+
+        translateY(-18px);
+
+    }
+
+}/*=========================================================
+    FILE : style.css
+    PROJECT : Birthday Surprise For Mubashra
+    PART : 2
+
+    ✔ Luxury Gift Box
+    ✔ Ribbon
+    ✔ Bow
+    ✔ Birthday Card
+    ✔ Wish Card
+    ✔ Envelope
+    ✔ Premium Buttons
+=========================================================*/
+
+
+/*=========================================================
+                GIFT BODY
+=========================================================*/
+
+.giftBody{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:220px;
+
+    height:150px;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff4d6d,
+        #d90429
+    );
+
+    box-shadow:
+
+        inset 0 8px 15px rgba(255,255,255,.25),
+
+        inset 0 -10px 20px rgba(0,0,0,.25),
+
+        0 18px 35px rgba(0,0,0,.45);
+
+}
+
+
+/*=========================================================
+                GIFT LID
+=========================================================*/
+
+.giftLid{
+
+    position:absolute;
+
+    top:22px;
+
+    left:-8px;
+
+    width:236px;
+
+    height:58px;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ff6b81,
+        #e63946
+    );
+
+    transform-origin:left center;
+
+    transition:1s;
+
+    z-index:5;
+
+    box-shadow:
+
+        inset 0 5px 10px rgba(255,255,255,.2),
+
+        0 10px 20px rgba(0,0,0,.25);
+
+}
+
+
+/*=========================================================
+                RIBBONS
+=========================================================*/
+
+.ribbonVertical{
+
+    position:absolute;
+
+    left:96px;
+
+    width:28px;
+
+    height:220px;
+
+    background:
+    linear-gradient(
+        to right,
+        #ffe066,
+        #ffd43b,
+        #f4b400
+    );
+
+    z-index:6;
+
+}
+
+.ribbonHorizontal{
+
+    position:absolute;
+
+    top:52px;
+
+    width:220px;
+
+    height:28px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #ffe066,
+        #ffd43b,
+        #f4b400
+    );
+
+    z-index:6;
+
+}
+
+
+/*=========================================================
+                GIFT BOW
+=========================================================*/
+
+.giftBow{
+
+    position:absolute;
+
+    width:80px;
+
+    height:80px;
+
+    top:-18px;
+
+    left:70px;
+
+    z-index:10;
+
+}
+
+.giftBow span{
+
+    position:absolute;
+
+    width:38px;
+
+    height:62px;
+
+    background:#ffd43b;
+
+    border-radius:50%;
+
+    box-shadow:
+
+        inset 0 3px 8px rgba(255,255,255,.35);
+
+}
+
+.giftBow span:first-child{
+
+    left:0;
+
+    transform:rotate(-35deg);
+
+}
+
+.giftBow span:last-child{
+
+    right:0;
+
+    transform:rotate(35deg);
+
+}
+
+
+/*=========================================================
+                GIFT OPEN
+=========================================================*/
+
+.giftBox.open .giftLid{
+
+    transform:
+
+        rotate(-125deg)
+
+        translate(-30px,-20px);
+
+}
+
+.giftBox.open{
+
+    animation:none;
+
+}
+
+
+/*=========================================================
+                CLICK TEXT
+=========================================================*/
+
+.clickText{
+
+    margin-top:60px;
+
+    font-size:22px;
+
+    color:#ffffff;
+
+    animation:textBlink 1.4s infinite;
+
+}
+
+@keyframes textBlink{
+
+    50%{
+
+        opacity:.35;
+
+    }
+
+}
+
+
+/*=========================================================
+                CARDS
+=========================================================*/
+
+.birthdayCard,
+.wishCard,
+.letterCard,
+.duaCard,
+.specialCard,
+.finalCard{
+
+    width:90%;
+
+    max-width:850px;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+
+/*=========================================================
+                HEADINGS
+=========================================================*/
+
+.birthdayCard h1,
+.wishCard h1,
+.letterCard h1,
+.duaCard h1,
+.specialCard h1,
+.finalCard h1{
+
+    font-size:52px;
+
+    color:#ffd43b;
+
+    margin-bottom:20px;
+
+}
+
+.birthdayCard h2,
+.finalCard h2{
+
+    font-size:36px;
+
+    color:#ffb3c6;
+
+    margin-bottom:20px;
+
+}
+
+
+/*=========================================================
+                PARAGRAPHS
+=========================================================*/
+
+.birthdayCard p,
+.wishCard p,
+.letterCard p,
+.duaCard p,
+.specialCard p,
+.finalMessage{
+
+    font-size:21px;
+
+    line-height:1.9;
+
+    color:#f4f4f4;
+
+}
+
+
+/*=========================================================
+                BUTTONS
+=========================================================*/
+
+button{
+
+    margin-top:35px;
+
+    padding:15px 42px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ff4d6d,
+        #8338ec
+    );
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+
+        0 10px 25px rgba(255,77,109,.45);
+
+}
+
+
+/*=========================================================
+                ENVELOPE
+=========================================================*/
+
+.letterContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#envelope{
+
+    position:relative;
+
+    width:340px;
+
+    height:230px;
+
+    margin-bottom:35px;
+
+}
+
+.envelopeBack{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#ff8fa3;
+
+    border-radius:10px;
+
+}
+
+.envelopeFront{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#ff758f;
+
+    clip-path:polygon(0 100%,50% 45%,100% 100%);
+
+    z-index:3;
+
+}
+
+.envelopeTop{
+
+    position:absolute;
+
+    width:100%;
+
+    height:120px;
+
+    background:#ffb3c6;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    transition:1s;
+
+    z-index:4;
+
+}
+
+#envelope.open .envelopeTop{
+
+    transform:rotateX(180deg);
+
+}
+
+
+/*=========================================================
+                LETTER PAPER
+=========================================================*/
+
+.letterPaper{
+
+    position:absolute;
+
+    left:20px;
+
+    top:30px;
+
+    width:300px;
+
+    height:180px;
+
+    background:white;
+
+    color:#222;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    transition:1s;
+
+}
+
+#envelope.open .letterPaper{
+
+    transform:translateY(-110px);
+
+}/*=========================================================
+    FILE : style.css
+    PROJECT : Birthday Surprise For Mubashra
+    PART : 3
+
+    ✔ Moving Clouds
+    ✔ Realistic Stars
+    ✔ Shooting Stars
+    ✔ Hearts
+    ✔ Butterflies
+    ✔ Balloons
+    ✔ Rose Rain
+    ✔ Magic Particles
+=========================================================*/
+
+
+/*=========================================================
+                MOVING CLOUDS
+=========================================================*/
+
+.cloud{
+
+    position:absolute;
+
+    width:260px;
+
+    height:80px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:80px;
+
+    filter:blur(10px);
+
+    animation:cloudMove 80s linear infinite;
+
+}
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    background:inherit;
+
+    border-radius:50%;
+
+    left:35px;
+
+    top:-45px;
+
+}
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+
+    height:150px;
+
+    background:inherit;
+
+    border-radius:50%;
+
+    right:30px;
+
+    top:-65px;
+
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        transform:translateX(-350px);
+
+    }
+
+    to{
+
+        transform:translateX(calc(100vw + 350px));
+
+    }
+
+}
+
+
+/*=========================================================
+                HEARTS
+=========================================================*/
+
+.heart{
+
+    position:absolute;
+
+    font-size:28px;
+
+    animation:heartFloat 8s linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:
+
+        translateY(120vh)
+
+        scale(.4);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(-120vh)
+
+        rotate(360deg)
+
+        scale(1.5);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*=========================================================
+                BUTTERFLIES
+=========================================================*/
+
+.butterfly{
+
+    position:absolute;
+
+    font-size:34px;
+
+    animation:flyButterfly 15s linear forwards;
+
+}
+
+@keyframes flyButterfly{
+
+    0%{
+
+        transform:
+
+        translateX(-120px)
+
+        translateY(0);
+
+    }
+
+    25%{
+
+        transform:
+
+        translateX(300px)
+
+        translateY(-60px);
+
+    }
+
+    50%{
+
+        transform:
+
+        translateX(650px)
+
+        translateY(40px);
+
+    }
+
+    75%{
+
+        transform:
+
+        translateX(1000px)
+
+        translateY(-50px);
+
+    }
+
+    100%{
+
+        transform:
+
+        translateX(1500px)
+
+        translateY(20px);
+
+    }
+
+}
+
+
+/*=========================================================
+                BALLOONS
+=========================================================*/
+
+.balloon{
+
+    position:absolute;
+
+    width:70px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    animation:balloonFly 14s linear forwards;
+
+}
+
+.balloon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+
+    height:70px;
+
+    background:#ffffff88;
+
+    left:50%;
+
+    top:90px;
+
+}
+
+.red{background:#ff4d6d;}
+
+.blue{background:#4dabf7;}
+
+.green{background:#40c057;}
+
+.yellow{background:#ffd43b;}
+
+.purple{background:#9775fa;}
+
+@keyframes balloonFly{
+
+    from{
+
+        transform:translateY(120vh);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+
+/*=========================================================
+                ROSE RAIN
+=========================================================*/
+
+.rose{
+
+    position:absolute;
+
+    font-size:24px;
+
+    animation:roseFall 10s linear forwards;
+
+}
+
+@keyframes roseFall{
+
+    from{
+
+        transform:
+
+        translateY(-120px)
+
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(120vh)
+
+        rotate(720deg);
+
+    }
+
+}
+
+
+/*=========================================================
+                MAGIC PARTICLES
+=========================================================*/
+
+.magicParticle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#fff7b2;
+
+    box-shadow:
+
+        0 0 12px white,
+
+        0 0 25px gold,
+
+        0 0 45px white;
+
+    animation:magicFloat 5s linear forwards;
+
+}
+
+@keyframes magicFloat{
+
+    from{
+
+        transform:
+
+        translateY(80px)
+
+        scale(.4);
+
+        opacity:0;
+
+    }
+
+    25%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(-350px)
+
+        scale(1.6);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*=========================================================
+                GOLD PARTICLES
+=========================================================*/
+
+.goldParticle{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:gold;
+
+    box-shadow:
+
+        0 0 10px gold,
+
+        0 0 20px gold;
+
+    animation:goldFloat 6s linear forwards;
+
+}
+
+@keyframes goldFloat{
+
+    from{
+
+        transform:translateY(120vh);
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+    }
+
+}
+
+
+/*=========================================================
+                SPARKLES
+=========================================================*/
+
+.spark{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    box-shadow:
+
+        0 0 10px white,
+
+        0 0 25px white;
+
+    animation:spark 2s infinite;
+
+}
+
+@keyframes spark{
+
+    0%,100%{
+
+        transform:scale(.3);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:scale(1.8);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================================================
+                SMOKE
+=========================================================*/
+
+.smoke{
+
+    position:absolute;
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    filter:blur(18px);
+
+    animation:smokeUp 6s linear forwards;
+
+}
+
+@keyframes smokeUp{
+
+    from{
+
+        transform:
+
+        translateY(0)
+
+        scale(.5);
+
+        opacity:.7;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(-300px)
+
+        scale(2);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*=========================================================
+                LIGHT GLOW
+=========================================================*/
+
+.lightGlow{
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    filter:blur(60px);
+
+    animation:glowPulse 4s ease-in-out infinite;
+
+}
+
+@keyframes glowPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.3);
+
+    }
+
+}/*=========================================================
+    FILE : style.css
+    PROJECT : Birthday Surprise For Mubashra
+    PART : 4 (FINAL)
+
+    ✔ Final Card
+    ✔ Replay Button
+    ✔ Footer
+    ✔ Fireworks Canvas
+    ✔ Screen Animations
+    ✔ Responsive Design
+=========================================================*/
+
+
+/*=========================================================
+                FINAL CARD
+=========================================================*/
+
+.finalCard{
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.finalIcons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.finalIcons span{
+
+    font-size:40px;
+
+    animation:iconFloat 3s ease-in-out infinite;
+
+}
+
+.finalIcons span:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.finalIcons span:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+.finalIcons span:nth-child(4){
+
+    animation-delay:1.2s;
+
+}
+
+.finalIcons span:nth-child(5){
+
+    animation-delay:1.6s;
+
+}
+
+@keyframes iconFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================================
+                FOOTER
+=========================================================*/
+
+#footer{
+
+    position:fixed;
+
+    left:0;
+
+    bottom:12px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:rgba(255,255,255,.75);
+
+    letter-spacing:1px;
+
+    z-index:999;
+
+}
+
+
+/*=========================================================
+                FIREWORK CANVAS
+=========================================================*/
+
+#fireworksCanvas{
+
+    pointer-events:none;
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-2;
+
+}
+
+
+/*=========================================================
+                BUTTON EFFECTS
+=========================================================*/
+
+button{
+
+    transition:
+
+        transform .35s,
+
+        box-shadow .35s,
+
+        background .35s;
+
+}
+
+button:hover{
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.05);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*=========================================================
+                SCREEN ANIMATIONS
+=========================================================*/
+
+.fadeIn{
+
+    animation:fadeIn .9s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        scale(.95)
+
+        translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        scale(1)
+
+        translateY(0);
+
+    }
+
+}
+
+
+.zoomIn{
+
+    animation:zoomIn .8s ease;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+.slideUp{
+
+    animation:slideUp .8s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        transform:translateY(70px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================================================
+                GLASS HOVER
+=========================================================*/
+
+.birthdayCard:hover,
+.wishCard:hover,
+.letterCard:hover,
+.duaCard:hover,
+.specialCard:hover,
+.finalCard:hover{
+
+    transform:
+
+        translateY(-8px);
+
+    box-shadow:
+
+        0 30px 70px rgba(255,255,255,.10);
+
+}
+
+
+/*=========================================================
+                SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#888;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#bbb;
+
+}
+
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px){
+
+    #moon{
+
+        width:140px;
+
+        height:140px;
+
+        right:40px;
+
+    }
+
+    .birthdayCard,
+    .wishCard,
+    .letterCard,
+    .duaCard,
+    .specialCard,
+    .finalCard{
+
+        width:94%;
+
+        padding:35px;
+
+    }
+
+    h1{
+
+        font-size:40px !important;
+
+    }
+
+    h2{
+
+        font-size:28px !important;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .giftBox{
+
+        transform:translateX(-50%) scale(.85);
+
+    }
+
+    .welcomeText{
+
+        font-size:24px;
+
+    }
+
+    .clickText{
+
+        font-size:18px;
+
+    }
+
+    p{
+
+        font-size:18px !important;
+
+        line-height:1.7 !important;
+
+    }
+
+    button{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+    #envelope{
+
+        transform:scale(.82);
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    #moon{
+
+        width:110px;
+
+        height:110px;
+
+        right:20px;
+
+        top:20px;
+
+    }
+
+    .giftBox{
+
+        transform:translateX(-50%) scale(.72);
+
+    }
+
+    .birthdayCard,
+    .wishCard,
+    .letterCard,
+    .duaCard,
+    .specialCard,
+    .finalCard{
+
+        padding:25px;
+
+    }
+
+    .finalIcons span{
+
+        font-size:28px;
+
+    }
+
+}
+
+
+/*=========================================================
+                THE END
+=========================================================*/

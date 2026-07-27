@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+            BASIC SETTINGS
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Mubashra ❤️</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ==========================================
+        LOADING SCREEN
+========================================== -->
+
+<div id="loadingScreen">
+
+    <div class="loader">
+
+        <div class="loaderRing"></div>
+
+        <h2>
+
+            Preparing A Beautiful Surprise...
+
+        </h2>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+        REAL NIGHT SKY
+========================================== -->
+
+<div id="nightSky">
+
+    <!-- White Moon -->
+
+    <div id="moon">
+
+        <div class="moonGlow"></div>
+
+    </div>
+
+    <!-- Stars -->
+
+    <div id="stars"></div>
+
+    <!-- Shooting Stars -->
+
+    <div id="shootingStars"></div>
+
+    <!-- Slow Clouds -->
+
+    <div id="clouds"></div>
+
+</div>
+
+
+<!-- ==========================================
+        PARTICLE LAYERS
+========================================== -->
+
+<div id="magicDust"></div>
+
+<div id="goldParticles"></div>
+
+<div id="sparkles"></div>
+
+<div id="smokeLayer"></div>
+
+<div id="lightLayer"></div>
+
+
+<!-- ==========================================
+        DECORATION LAYERS
+========================================== -->
+
+<div id="heartLayer"></div>
+
+<div id="flowerLayer"></div>
+
+<div id="roseLayer"></div>
+
+<div id="balloonLayer"></div>
+
+<div id="butterflyLayer"></div>
+
+<div id="confettiLayer"></div>
+
+
+<!-- ==========================================
+        FIREWORK CANVAS
+========================================== -->
+
+<canvas id="fireworksCanvas"></canvas>
+
+
+<!-- ==========================================
+        AUDIO
+========================================== -->
+
+<!-- Birthday Song -->
+
+<audio id="birthdaySong">
+    <source src="Happy Birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Final Song -->
+
+<audio id="finalSong" loop>
+    <source src="my love song.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ==========================================
+        SCREEN 1
+========================================== -->
+
+<section id="screen1"
+         class="screen active">
+
+
+    <div class="giftScene">
+
+
+        <h3 class="welcomeText">
+
+            ✨ A Special Birthday Surprise ✨
+
+        </h3>
+
+
+        <!-- Gift Shadow -->
+
+        <div class="giftShadow"></div>
+
+
+        <!-- Gift Box -->
+
+        <div id="giftBox"
+             class="giftBox">
+
+
+            <!-- Lid -->
+
+            <div class="giftLid"></div>
+
+
+            <!-- Box -->
+
+            <div class="giftBody"></div>
+
+
+            <!-- Ribbon Vertical -->
+
+            <div class="ribbonVertical"></div>
+
+
+            <!-- Ribbon Horizontal -->
+
+            <div class="ribbonHorizontal"></div>
+
+
+            <!-- Bow -->
+
+            <div class="giftBow">
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Click Text -->
+
+        <p class="clickText">
+
+            🎁 Click The Gift To Open 🎁
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+        SCREEN 2
+========================================== -->
+
+<section id="screen2"
+         class="screen">
+
+
+    <div class="birthdayCard">
+
+
+        <h1>
+
+            🎉 Happy Birthday 🎉
+
+        </h1>
+
+
+        <h2>
+
+            Mubashra ❤️
+
+        </h2>
+
+
+        <p>
+
+            Today is a very special day.
+
+            May Allah bless you with happiness,
+
+            peace, success,
+
+            good health,
+
+            and endless smiles.
+
+        </p>
+
+
+        <button id="nextOne">
+
+            Continue ❤️
+
+        </button>
+
+
+    </div>
+
+</section><!-- ==========================================
+        SCREEN 3
+========================================== -->
+
+<section id="screen3" class="screen">
+
+    <div class="wishCard">
+
+        <h1>🌸 Best Wishes 🌸</h1>
+
+        <p>
+
+            Wishing you a life filled with happiness,
+            success, peace and countless beautiful moments.
+
+            May every dream in your heart become reality
+            and may Allah always keep you smiling.
+
+        </p>
+
+        <button id="nextTwo">
+
+            Read Something Special 💖
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        SCREEN 4
+        ENVELOPE
+========================================== -->
+
+<section id="screen4" class="screen">
+
+    <div class="letterContainer">
+
+        <div id="envelope">
+
+            <div class="envelopeBack"></div>
+
+            <div class="envelopeFront"></div>
+
+            <div class="envelopeTop"></div>
+
+            <div class="letterPaper">
+
+                <h2>💌 For Mubashra</h2>
+
+            </div>
+
+        </div>
+
+        <button id="openLetter">
+
+            Open Letter ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        SCREEN 5
+        LETTER
+========================================== -->
+
+<section id="screen5" class="screen">
+
+    <div class="letterCard">
+
+        <h1>💌 A Small Message</h1>
+
+        <div id="typingMessage"></div>
+
+        <button id="nextThree">
+
+            Continue 🌹
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        SCREEN 6
+        DUA
+========================================== -->
+
+<section id="screen6" class="screen">
+
+    <div class="duaCard">
+
+        <h1>🤲 A Prayer For You</h1>
+
+        <p>
+
+            May Allah bless your life with peace,
+            happiness, good health,
+            endless success,
+            and protect you from every difficulty.
+
+            Ameen. 🤍
+
+        </p>
+
+        <button id="nextFour">
+
+            One Last Message ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        SCREEN 7
+        SPECIAL MESSAGE
+========================================== -->
+
+<section id="screen7" class="screen">
+
+    <div class="specialCard">
+
+        <h1>❤️ Dear Mubashra ❤️</h1>
+
+        <p>
+
+            Today is your special day.
+
+            I know I made mistakes,
+            and I sincerely regret them.
+
+            I don't expect anything in return.
+
+            I only wanted to wish you
+            a truly happy birthday
+            and pray that your life is always
+            filled with happiness,
+            respect,
+            peace,
+            and success.
+
+            If this small surprise brings
+            even a little smile to your face,
+            that alone will mean a lot to me.
+
+            Happy Birthday Once Again. 🌹
+
+        </p>
+
+        <button id="nextFive">
+
+            Final Surprise 🎵
+
+        </button>
+
+    </div>
+
+</section><!-- ==========================================
+        SCREEN 8
+        FINAL CELEBRATION
+========================================== -->
+
+<section id="screen8" class="screen">
+
+    <div class="finalCard">
+
+        <h1>🎂 Happy Birthday 🎂</h1>
+
+        <h2>Mubashra ❤️</h2>
+
+        <p class="finalMessage">
+
+            Wishing you a beautiful life filled with
+            happiness, peace, success and countless smiles.
+
+            May Allah always protect you and bless
+            every step of your journey.
+
+            Thank you for watching this little surprise.
+
+            🌹 Happy Birthday Once Again 🌹
+
+        </p>
+
+        <div class="finalIcons">
+
+            <span>🌹</span>
+            <span>🦋</span>
+            <span>💖</span>
+            <span>✨</span>
+            <span>🎈</span>
+
+        </div>
+
+        <button id="restartBtn">
+
+            🎁 Watch Again
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+        FINAL EFFECT LAYERS
+========================================== -->
+
+<div id="roseRain"></div>
+
+<div id="heartRain"></div>
+
+<div id="magicGlow"></div>
+
+<div id="goldRain"></div>
+
+<div id="finalSparkles"></div>
+
+<div id="finalSmoke"></div>
+
+
+<!-- ==========================================
+        FINAL FOOTER
+========================================== -->
+
+<footer id="footer">
+
+    Made with ❤️ Especially for Mubashra
+
+</footer>
+
+
+<!-- ==========================================
+        JAVASCRIPT
+========================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
