@@ -708,7 +708,8 @@ body{
 .letterCard,
 .duaCard,
 .specialCard,
-.finalCard{
+.finalCard{  max-height:80vh;
+overflow-y:auto;
 
     width:90%;
 
