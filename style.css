@@ -1948,6 +1948,188 @@ button:active{
 }
 
 
+
+html,
+body{
+
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+
+}
+
+img,
+canvas{
+
+    max-width:100%;
+    height:auto;
+
+}
+
+#nightSky{
+
+    width:100vw;
+    height:100vh;
+
+}
+
+.giftBox{
+
+    left:50%;
+    transform:translateX(-50%);
+}
+
+
+/*--------------- Tablet ---------------*/
+
+@media (max-width:992px){
+
+    .giftBox{
+
+        transform:
+        translateX(-50%)
+        scale(.82);
+
+    }
+
+    .birthdayCard,
+    .wishCard,
+    .letterCard,
+    .duaCard,
+    .specialCard,
+    .finalCard{
+
+        width:92%;
+
+        max-width:92%;
+
+        padding:30px 20px;
+
+    }
+
+    h1{
+
+        font-size:34px !important;
+
+    }
+
+    h2{
+
+        font-size:26px !important;
+
+    }
+
+}
+
+
+/*--------------- Mobile ---------------*/
+
+@media (max-width:600px){
+
+    #moon{
+
+        width:90px;
+        height:90px;
+        top:15px;
+        right:15px;
+
+    }
+
+    .giftBox{
+
+        transform:
+        translateX(-50%)
+        scale(.62);
+
+        bottom:40px;
+
+    }
+
+    .clickText{
+
+        font-size:16px;
+
+        padding:0 15px;
+
+    }
+
+    .birthdayCard,
+    .wishCard,
+    .letterCard,
+    .duaCard,
+    .specialCard,
+    .finalCard{
+
+        width:95%;
+
+        padding:20px 15px;
+
+        border-radius:18px;
+
+    }
+
+    h1{
+
+        font-size:28px !important;
+
+    }
+
+    h2{
+
+        font-size:22px !important;
+
+    }
+
+    p{
+
+        font-size:16px !important;
+
+        line-height:1.6 !important;
+
+    }
+
+    button{
+
+        width:100%;
+
+        max-width:260px;
+
+        font-size:16px;
+
+        padding:14px;
+
+    }
+
+    #envelope{
+
+        transform:scale(.70);
+
+    }
+
+}
+
+
+/*--------------- Small Mobile ---------------*/
+
+@media (max-width:380px){
+
+    .giftBox{
+
+        transform:
+        translateX(-50%)
+        scale(.52);
+
+    }
+
+    h1{
+
+        font-size:24px !important;
+
+    }
+
+}
+
+
 /*=========================================================
                 THE END
 =========================================================*/
