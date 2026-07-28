@@ -957,51 +957,34 @@ function createRoseRain(){
                 TYPING EFFECT
 =========================================================*/
 
-function startTyping(){
+function startTyping() {
+    const area = document.getElementById("typingMessage");
+    if (!area) return;
 
-    const area=document.getElementById("typingMessage");
+    const message = `🤲 Happy Birthday! 🎂🤍
 
-    if(!area) return;
+On your special day, my sincerest prayer is that Allah (SWT) showers your life with endless mercy, happiness, and barakah. 🤲✨ May He protect you from every sorrow, every hardship, and every evil, and replace them with peace, joy, and contentment. 🌸
 
-    const message=
+May Allah grant you a heart that is always close to Him, a smile that never fades, and a life filled with beautiful moments and sincere people. 💖 May He bless you with good health, long life, halal rizq, success in every step you take, and make every dream that is good for you come true. 🌹
 
-`Dear Mubashra,
+May your duas never go unanswered, your tears only be tears of happiness, and your heart always find comfort in Allah's remembrance. 🤍📿 May He strengthen your faith, forgive your shortcomings, guide you on the straight path, and make you among those whom He loves the most. 🌙✨
 
-Happy Birthday.
+I pray that Allah writes for you a future more beautiful than you have ever imagined, fills your home with love and tranquility, and surrounds you with people who truly care for you. 🏡💐
 
-Ek Doosre Ko Manaa Lete Hain
-Chalo Mohabbat Ko Bacha Lete Hain
+Ameen Ya Rabbal Aalameen. 🤲❤️`;
 
-Har Galatfehmi Ko Mita Dete Hain
-Chalo Mohabbat Ko Bacha Lete Hain
+    area.innerHTML = "";
 
-Iss Nafrat Ko Kahin Dafna Dete Hain
-Chalo Mohabbat Ko Bacha Lete Hain
+    let i = 0;
 
-Apne Har Waade Ko Nibha Lete Hain
-Chalo Mohabbat Ko Bacha Lete Hain
-
-Ek Doosre Ko Gale Se Laga Lete Hain
-Chalo Mohabbat Ko Bacha Lete Hain
-
-    let i=0;
-
-    area.innerHTML="";
-
-    const timer=setInterval(()=>{
-
-        area.innerHTML+=message.charAt(i);
-
+    const timer = setInterval(() => {
+        area.innerHTML += message.charAt(i);
         i++;
 
-        if(i>=message.length){
-
+        if (i >= message.length) {
             clearInterval(timer);
-
         }
-
-    },45);
-
+    }, 35);
 }
 
 
