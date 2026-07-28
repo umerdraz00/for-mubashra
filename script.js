@@ -969,20 +969,20 @@ function startTyping(){
 
 Happy Birthday.
 
-I know I made mistakes,
-and I sincerely regret them.
+Ek Doosre Ko Manaa Lete Hain
+Chalo Mohabbat Ko Bacha Lete Hain
 
-I don't expect anything in return.
+Har Galatfehmi Ko Mita Dete Hain
+Chalo Mohabbat Ko Bacha Lete Hain
 
-I simply wanted to pray that
-Allah fills your life with happiness,
-peace, success and beautiful moments.
+Iss Nafrat Ko Kahin Dafna Dete Hain
+Chalo Mohabbat Ko Bacha Lete Hain
 
-May your smile always remain.
+Apne Har Waade Ko Nibha Lete Hain
+Chalo Mohabbat Ko Bacha Lete Hain
 
-Happy Birthday once again.
-
-- Umar`;
+Ek Doosre Ko Gale Se Laga Lete Hain
+Chalo Mohabbat Ko Bacha Lete Hain
 
     let i=0;
 
